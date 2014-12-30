@@ -41,10 +41,14 @@ class Player
     true if ship_count == 0
   end
 
-  def fire(board, coord)
-    if board.ship_cells_array.include?(coord)
+  def fire(board, coord)    #not working!
+    if board.ship_cells.include?(coord.to_s)
+      board.places[coord.to_sym] = 'H'
+      board.ship_cells.delete(coord.to_s)
+      board.ship_cells_array
       'hit!'
     else
+      board.places[coord.to_sym] = 'M'
       'miss'
     end
   end

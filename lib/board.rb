@@ -30,6 +30,10 @@ class Board
     @board_ships << [ship, coords]
   end
 
+  def ship_cells
+    @ship_cells
+  end
+
   def ship_cells_array
     @ship_cells = @board_ships.map { |ships| ships[1] }
     @ship_cells.flatten!
