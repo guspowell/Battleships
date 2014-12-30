@@ -6,7 +6,7 @@ describe Cell do
 
 
   it 'should have a content of water' do
-    expect(cell.contents).to eq(:water)
+    expect(cell.contents).to eq(:w)
   end
 
   it 'should be empty upon initializing (water only)' do

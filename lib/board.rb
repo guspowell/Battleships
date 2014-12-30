@@ -18,7 +18,9 @@ class Board
       i1: " ", i2: " ", i3: " ", i4: " ", i5: " ", i6: " ", i7: " ", i8: " ", i9: " ", i10: " ",
       j1: " ", j2: " ", j3: " ", j4: " ", j5: " ", j6: " ", j7: " ", j8: " ", j9: " ", j10: " "
   }
+    places.each { |k,v| places[k] = Cell.new }
   end
+
 
   def ship_count
     @board_ships.size
@@ -33,12 +35,6 @@ class Board
     @ship_cells.flatten!
     @ship_cells.each { |cell| places[cell.to_sym] = Cell.new.fill! }
   end
-
-  # def receive_ship(cell)
-  #   full_cell = Cell.new
-  #   full_cell.fill!
-  #   places[cell] = full_cell
-  # end
 
 
   def draw

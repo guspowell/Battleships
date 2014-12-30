@@ -1,7 +1,9 @@
+require 'colorize'
+
 class Cell
 
   def initialize
-    @contents = :water
+    @contents = :w
     @full = false
   end
   
@@ -19,7 +21,7 @@ class Cell
 
   def fill!
     @full = true
-    @contents = :ship
+    @contents = :s
   end
 
   def hit?

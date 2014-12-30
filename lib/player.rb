@@ -26,6 +26,7 @@ class Player
     raise "No ships left to place!" if empty
     board.receive(ship, coords)
     fleet.delete(ship)
+    board.ship_cells_array
   end
 
   def adjoining(coords)
