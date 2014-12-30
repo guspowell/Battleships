@@ -23,22 +23,7 @@ class Ship
 
   def sunk?
     health == 0
-  end
-
-  # def place(array)
-  #   raise "Ship does not fit here" if array.size != @size
-  #   raise "Ship must be placed on adjoining cells" unless adjoining(array)
-  #   @cells = array
-  # end
-
-  # def adjoining(coords)
-  #     previous_coord = coords.shift
-  #     coords.each do |item|
-  #       return true if (previous_coord.next == item) || previous_coord.reverse.next.reverse == item 
-  #       previous_cood = item
-  #     end 
-  #     false
-  # end
+  end 
 
   def self.aircraft_carrier
     new 5

@@ -41,4 +41,12 @@ class Player
     true if ship_count == 0
   end
 
+  def fire(board, coord)
+    if board.ship_cells_array.include?(coord)
+      'hit!'
+    else
+      'miss'
+    end
+  end
+
 end
