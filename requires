@@ -4,3 +4,4 @@ require './lib/board.rb'
 require './lib/player.rb'
 player = Player.new
 board = Board.new
+cell = Cell.new

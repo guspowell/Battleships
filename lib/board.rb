@@ -31,7 +31,7 @@ class Board
   def ship_cells_array
     @ship_cells = @board_ships.map { |ships| ships[1] }
     @ship_cells.flatten!
-    @ship_cells.each { |cell| places[cell.to_sym] = 'S' }
+    @ship_cells.each { |cell| places[cell.to_sym] = Cell.new.fill! }
   end
 
   # def receive_ship(cell)
