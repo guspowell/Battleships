@@ -47,6 +47,8 @@ class Player
       'hit!'
     else
       'miss!'
+       board.places[coord] = 'M'
+
     end
   end
 
