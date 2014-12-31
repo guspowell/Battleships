@@ -21,7 +21,6 @@ class Board
     places.each { |k,v| places[k] = Cell.new }
   end
 
-
   def ship_count
     @board_ships.size
   end
@@ -31,13 +30,12 @@ class Board
   end
 
   def ship_cells
-    @ship_cells
-  end
-
-  def ship_cells_array
     @ship_cells = @board_ships.map { |ships| ships[1] }
     @ship_cells.flatten!
-    @ship_cells.each { |cell| places[cell.to_sym] = Cell.new.fill! }
+  end
+
+  def fill_cells
+    ship_cells.each { |cell| places[cell.to_sym] = Cell.new.fill! }
   end
 
 

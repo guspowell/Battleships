@@ -26,7 +26,7 @@ class Player
     raise "No ships left to place!" if empty
     board.receive(ship, coords)
     fleet.delete(ship)
-    board.ship_cells_array
+    board.fill_cells
   end
 
   def adjoining(coords)
@@ -41,16 +41,24 @@ class Player
     true if ship_count == 0
   end
 
-  def fire(board, coord)    #not working!
-    if board.ship_cells.include?(coord.to_s)
-      board.places[coord.to_sym] = 'H'
-      board.ship_cells.delete(coord.to_s)
-      board.ship_cells_array
+  def fire (board, coord)
+    if board.places[coord] == :s
+      board.places[coord] = 'H'
       'hit!'
     else
-      board.places[coord.to_sym] = 'M'
-      'miss'
+      'miss!'
     end
   end
+
+  # def fire(board, coord)    #not working!
+  #   if board.ship_cells.include?(coord.to_s)
+  #     board.places[coord.to_sym] = 'H'
+  #     board.ship_cells.delete(coord.to_s)
+  #     'hit!'
+  #   else
+  #     board.places[coord.to_sym] = 'M'
+  #     'miss'
+  #   end
+  # end
 
 end

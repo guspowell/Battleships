@@ -48,14 +48,24 @@ let(:board) { Board.new }
     expect{player.place(board,player.patrol_boat,["h4", "h5"])}.to raise_error(RuntimeError, "No ships left to place!")
   end
 
-  it 'should return hit if player fires at cell with ship in' do
+  # it 'should return hit if player fires at cell with ship in' do
+  #   place_all_ships
+  #   expect(player.fire(board, 'a1')).to eq 'hit!'
+  # end
+
+  # it 'should return hit if player fires at cell with ship in' do
+  #   place_all_ships
+  #   expect(player.fire(board, 'f5')).to eq 'miss'
+  # end
+
+  it 'should return hit if player fires at cell with ship on' do
     place_all_ships
-    expect(player.fire(board, 'a1')).to eq 'hit!'
+    expect(player.fire(board, :a1)).to eq 'hit!'
   end
 
-  it 'should return hit if player fires at cell with ship in' do
+ it 'should return miss if player fires at cell with ship in' do
     place_all_ships
-    expect(player.fire(board, 'f5')).to eq 'miss'
+    expect(player.fire(board, :g1)).to eq 'miss!'
   end
 
 end
