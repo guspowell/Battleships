@@ -27,6 +27,10 @@ require './lib/board.rb'
 require './lib/player.rb'
 ```
 
+##To do
+------------------
+-We have not yet had time to complete the game.
+
 ##Class Responsibility Collaboration Cards
 
 ###Cell
