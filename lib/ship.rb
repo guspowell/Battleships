@@ -23,7 +23,7 @@ class Ship
 
   def sunk?
     health == 0
-  end 
+  end
 
   def self.aircraft_carrier
     new 5

@@ -1,12 +1,10 @@
-require 'colorize'
-
 class Cell
 
   def initialize
     @contents = :w
     @full = false
   end
-  
+
   def contents
     @contents
   end
@@ -31,35 +29,5 @@ class Cell
       @hit = false
     end
   end
-
-
-
-  # def intialize
-  #   @full = false
-  # end
-
-  # def full?
-  #   @full
-  # end
-
-  # def full
-  #   @full = true
-  # end
-
-  # def empty
-  #   @full = false
-  # end
-
-  # def fill!
-  #   @full = true
-  # end
-
-  # # def hit?
-  # #   if full?
-  # #     @hit = true
-  # #   else
-  # #     @hit = false
-  # #   end
-  # # end
 
 end

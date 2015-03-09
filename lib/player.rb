@@ -1,6 +1,6 @@
-# require 'ship'
-# require 'cell'
-# require 'board'
+require 'ship'
+require 'cell'
+require 'board'
 
 class Player
 
@@ -32,8 +32,8 @@ class Player
   def adjoining(coords)
     previous_coord = coords.dup.shift
     coords.each do |item|
-      return true if (previous_coord.next == item) || previous_coord.reverse.next.reverse == item 
-    end 
+      return true if (previous_coord.next == item) || previous_coord.reverse.next.reverse == item
+    end
     false
   end
 
@@ -44,23 +44,10 @@ class Player
   def fire (board, coord)
     if board.places[coord] == :s
       board.places[coord] = 'H'
-      'hit!'
     else
-      'miss!'
        board.places[coord] = 'M'
 
     end
   end
-
-  # def fire(board, coord)    #not working!
-  #   if board.ship_cells.include?(coord.to_s)
-  #     board.places[coord.to_sym] = 'H'
-  #     board.ship_cells.delete(coord.to_s)
-  #     'hit!'
-  #   else
-  #     board.places[coord.to_sym] = 'M'
-  #     'miss'
-  #   end
-  # end
 
 end

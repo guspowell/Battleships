@@ -12,12 +12,9 @@ describe Board do
   end
 
   it "should be able to receive ships from the player" do
-    # 1. ask something of an object
-    # 2. check for return?
-    # 3. check for change in state?
     player.place(board, ship, ['a1','a2'])
     player.place(board, ship, ['b1', 'b2'])
-    expect(board.ship_count).to eq 2  
+    expect(board.ship_count).to eq 2
   end
 
   it "should be able to receive ships from the player in a position" do
@@ -28,15 +25,8 @@ describe Board do
   it "should be able to fill places given the coordinates" do
     player.place(board,player.patrol_boat,['a1','b1'])
     board.fill_cells
-    expect(board.places[:a1]).to eq(:s) #check cell contents = 
+    expect(board.places[:a1]).to eq(:s) #check cell contents =
     expect(board.places[:b1]).to eq(:s)
-
   end
 
-  # it "should be initialized with the ships in the right cells" do
-  #   player.place(board, player.patrol_ship, ['a1','a2'])
-
-  # end 
-
 end
-

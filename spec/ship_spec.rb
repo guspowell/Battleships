@@ -5,7 +5,7 @@ describe Ship do
  let(:ship) { Ship.new(2) }
 
 context 'Ship properties' do
-	
+
   it 'should have a size when created' do
     expect(ship.size).to eq(2)
   end
@@ -28,22 +28,6 @@ context 'Ship properties' do
     ship.hit!
     expect(ship).to be_floating
   end
-
-  # it 'should be able to be placed using an array of cells' do
-  #   expect(ship.place(["a1","a2"]).class).to eq(Array)
-  # end
-
-  # it 'should only be placed on the equivalent number of cells to size' do
-  #   expect(lambda { ship.place(['a1','a2','a3']) }).to raise_error(RuntimeError, "Ship does not fit here")
-  # end
-
-  # it "should only be able to be placed on adjoining cells" do
-  #   expect{ship.place(["a1", "j2"])}.to raise_error(RuntimeError, "Ship must be placed on adjoining cells") 
-  # end
-
-  # it "should know if array is not sequential" do
-  #     expect(ship.adjoining(["a1", "j2"])).to eq false
-  # end
 
 end
 

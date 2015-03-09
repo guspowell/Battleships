@@ -5,8 +5,6 @@ describe Player do
 
 let(:player) { Player.new }
 let(:board) { Board.new }
-# let(:ship) {double :ship, size: 2}
-# let(:ship) {Ship.patrol_boat}
 
   def place_all_ships
     player.place(board, player.patrol_boat, ["a1","a2"])
@@ -31,7 +29,7 @@ let(:board) { Board.new }
   end
 
   it "should only be able to be placed on adjoining cells" do
-    expect{player.place(board, player.patrol_boat,["a1", "j2"])}.to raise_error(RuntimeError, "Ship must be placed on adjoining cells") 
+    expect{player.place(board, player.patrol_boat,["a1", "j2"])}.to raise_error(RuntimeError, "Ship must be placed on adjoining cells")
   end
 
   it "should know if array is not sequential" do
@@ -48,24 +46,14 @@ let(:board) { Board.new }
     expect{player.place(board,player.patrol_boat,["h4", "h5"])}.to raise_error(RuntimeError, "No ships left to place!")
   end
 
-  # it 'should return hit if player fires at cell with ship in' do
-  #   place_all_ships
-  #   expect(player.fire(board, 'a1')).to eq 'hit!'
-  # end
-
-  # it 'should return hit if player fires at cell with ship in' do
-  #   place_all_ships
-  #   expect(player.fire(board, 'f5')).to eq 'miss'
-  # end
-
   it 'should return hit if player fires at cell with ship on' do
     place_all_ships
-    expect(player.fire(board, :a1)).to eq 'hit!'
+    expect(player.fire(board, :a1)).to eq 'H'
   end
 
  it 'should return miss if player fires at cell with ship in' do
     place_all_ships
-    expect(player.fire(board, :g1)).to eq 'miss!'
+    expect(player.fire(board, :g1)).to eq 'M'
   end
 
 end
