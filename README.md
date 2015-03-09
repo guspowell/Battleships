@@ -27,7 +27,7 @@ require './lib/board.rb'
 require './lib/player.rb'
 ```
 
-##To do
+To do
 ------------------
 -We have not yet had time to complete the game.
 
