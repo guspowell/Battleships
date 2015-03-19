@@ -29,7 +29,7 @@ require './lib/player.rb'
 
 To do
 ------------------
--We have not yet had time to complete the game.
+- [ ] We have not yet had time to complete the game.
 
 ##Class Responsibility Collaboration Cards
 
